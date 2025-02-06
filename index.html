@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <!-- AdLam-display font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Sora google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/f453f2628d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- style -->
+    <style>
+      .adlam {
+        font-family: "ADLaM Display", serif;
+      }
+
+      .sora {
+        font-family: "Sora", serif;
+      }
+    </style>
+  </head>
+  <body class="max-w-[1600px] mx-auto">
+    <header class="m-0 p-0">
+      <nav class="bg-[#FFF9F4]">
+        <div
+          class="navbar py-3 px-4 lg:py-6 bg-[#FFF9F4] lg:w-[1320px] mx-auto border-2 border-gray-700"
+        >
+          <!-- nav left -->
+          <div class="navbar-start">
+            <div class="flex gap-3">
+              <img src="c1-assets/logo-header.png" alt="" />
+              <a
+                class="btn p-0 gap-0 btn-ghost text-2xl hidden lg:block font-normal sora text-[#111111]"
+                >Browse<span class="text-[#FFDC26]">4</span>Pets</a
+              >
+            </div>
+          </div>
+          <!-- nav middle -->
+          <div class="navbar-center hidden lg:block">
+            <ul class="menu menu-horizontal px-1">
+              <li class="text-xl"><a>Find a pet</a></li>
+              <li class="text-xl">
+                <a>Breeds</a>
+              </li>
+              <li class="text-xl"><a>Contact us</a></li>
+            </ul>
+          </div>
+          <!-- nav right -->
+          <div class="navbar-end gap-3">
+            <i class="fa-regular hidden lg:block fa-bell text-[24px]"></i>
+            <i
+              class="fa-solid hidden lg:block fa-magnifying-glass text-[24px]"
+            ></i>
+            <button
+              class="px-[30px] lg:block hidden py-[10px] border border-[#FFDC26] text-[#111111] rounded-lg"
+            >
+              Login
+            </button>
+            <button
+              class="hidden lg:block px-[30px] py-[10px] border bg-[#FFDC26] text-[#111111] rounded-lg"
+            >
+              Register
+            </button>
+            <i class="fa-solid fa-bars lg:hidden text-3xl"></i>
+          </div>
+        </div>
+      </nav>
+      <!-- banner section -->
+      <section
+        class="lg:w-[1320px] border px-4 lg:px-0 border-red-500 lg:mx-auto mt-8 lg:mt-[76px] bg-[url(/c1-assets/cat-big.png)] h-[420px] bg-right-bottom lg:bg-cover bg-contain bg-no-repeat relative lg:h-[750px]"
+      >
+        <div>
+          <h2 class="lg:text-[56px] text-3xl text-[#111111] adlam font-normal">
+            Pamper Your Pet, <br />
+            Because They Deserve <br />
+            the Bes
+          </h2>
+          <p class="text-[#585858] lg:text-xl mt-3 lg:mt-4 mb-6 sora">
+            Discover a world of treats, toys, and <br class="lg:hidden" />
+            essentials handpicked for
+            <br class="hidden lg:block" />
+            your furry <br class="lg:hidden" />
+            friends. Shop now and make tails wag with <br class="lg:hidden" />
+            joy!
+          </p>
+          <button
+            class="px-[30px] py-[10px] border-none lg:text-xl sora bg-[#FFDC26] text-[#111111] rounded-lg"
+          >
+            Find a pet
+          </button>
+        </div>
+        <!-- <div class="border border-yellow-500">
+          <img src="c1-assets/cat-big.png" alt="" />
+        </div> -->
+      </section>
+    </header>
+    <main>
+      <!-- categories section -->
+      <section class="lg:w-[1320px] mx-auto">
+        <h4
+          class="font-bold adlam lg:text-4xl text-2xl mt-14 lg:mt-[140px] mb-4 ml-4 lg:mb-12"
+        >
+          Browse By Categories
+        </h4>
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-2 lg:gap-6 p-4">
+          <div class="bg-[#F9DF8A] px-12 py-[34px] rounded-xl">
+            <div
+              class="bg-white lg:p-7 p-6 lg:w-[104px] lg:h-[104px] w-[90px] h-[90px] flex justify-center items-center rounded-[50%]"
+            >
+              <img
+                class="lg:w-12 lg:h-12 w-10 h-10"
+                src="c1-assets/dog-cartoon.png"
+                alt=""
+              />
+            </div>
+            <h6
+              class="text-xl text-[#000000] mt-5 lg:mt-6 lg:mb-3 mb-2 text-center adlam"
+            >
+              Dog
+            </h6>
+            <p class="text-[#000000] text-center">3 items</p>
+          </div>
+          <div class="bg-[#F9DF8A] px-12 py-[34px] rounded-xl">
+            <div
+              class="bg-white lg:p-7 p-6 lg:w-[104px] lg:h-[104px] w-[90px] h-[90px] flex justify-center items-center rounded-[50%]"
+            >
+              <img
+                class="lg:w-12 lg:h-12 w-10 h-10"
+                src="c1-assets/dog-cartoon.png"
+                alt=""
+              />
+            </div>
+            <h6
+              class="text-xl text-[#000000] mt-5 lg:mt-6 lg:mb-3 mb-2 text-center adlam"
+            >
+              Dog
+            </h6>
+            <p class="text-[#000000] text-center">3 items</p>
+          </div>
+          <div class="bg-[#F9DF8A] px-12 py-[34px] rounded-xl">
+            <div
+              class="bg-white lg:p-7 p-6 lg:w-[104px] lg:h-[104px] w-[90px] h-[90px] flex justify-center items-center rounded-[50%]"
+            >
+              <img
+                class="lg:w-12 lg:h-12 w-10 h-10"
+                src="c1-assets/dog-cartoon.png"
+                alt=""
+              />
+            </div>
+            <h6
+              class="text-xl text-[#000000] mt-5 lg:mt-6 lg:mb-3 mb-2 text-center adlam"
+            >
+              Dog
+            </h6>
+            <p class="text-[#000000] text-center">3 items</p>
+          </div>
+          <div class="bg-[#F9DF8A] px-12 py-[34px] rounded-xl">
+            <div
+              class="bg-white lg:p-7 p-6 lg:w-[104px] lg:h-[104px] w-[90px] h-[90px] flex justify-center items-center rounded-[50%]"
+            >
+              <img
+                class="lg:w-12 lg:h-12 w-10 h-10"
+                src="c1-assets/dog-cartoon.png"
+                alt=""
+              />
+            </div>
+            <h6
+              class="text-xl text-[#000000] mt-5 lg:mt-6 lg:mb-3 mb-2 text-center adlam"
+            >
+              Dog
+            </h6>
+            <p class="text-[#000000] text-center">3 items</p>
+          </div>
+          <div class="bg-[#F9DF8A] px-12 py-[34px] rounded-xl">
+            <div
+              class="bg-white lg:p-7 p-6 lg:w-[104px] lg:h-[104px] w-[90px] h-[90px] flex justify-center items-center rounded-[50%]"
+            >
+              <img
+                class="lg:w-12 lg:h-12 w-10 h-10"
+                src="c1-assets/dog-cartoon.png"
+                alt=""
+              />
+            </div>
+            <h6
+              class="text-xl text-[#000000] mt-5 lg:mt-6 lg:mb-3 mb-2 text-center adlam"
+            >
+              Dog
+            </h6>
+            <p class="text-[#000000] text-center">3 items</p>
+          </div>
+          <div class="bg-[#F9DF8A] px-12 py-[34px] rounded-xl">
+            <div
+              class="bg-white lg:p-7 p-6 lg:w-[104px] lg:h-[104px] w-[90px] h-[90px] flex justify-center items-center rounded-[50%]"
+            >
+              <img
+                class="lg:w-12 lg:h-12 w-10 h-10"
+                src="c1-assets/dog-cartoon.png"
+                alt=""
+              />
+            </div>
+            <h6
+              class="text-xl text-[#000000] mt-5 lg:mt-6 lg:mb-3 mb-2 text-center adlam"
+            >
+              Dog
+            </h6>
+            <p class="text-[#000000] text-center">3 items</p>
+          </div>
+        </div>
+      </section>
+      <!-- challenge part
+       <section class="mx-auto max-w-7xl  flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center lg:gap-[100px] lg:mt-[120px] mt-[55px]">
+        <div class="lg:m-0 m-5">
+          <h1 class="lg:text-4xl text-2xl lg:mb-[50px] mb-6 adlam-display">Adoption</h1>
+
+          <h2 class="lg:text-2xl text-xl sora font-medium text-blue-500 mb-5">Aliquam</h2>
+
+          <p class="lg:text-xl text-[#695E72] sora mb-4 ">Elementum etiam auctor purus accumsan, elit. Adipiscing quisque a nisl, imperdiet. Ligula scelerisque sollicitudin turpis.</p>
+
+          <h2 class="lg:text-2xl text-xl sora font-medium text-blue-500 mb-5">Ipsum Fringilla</h2>
+          <p class="lg:text-xl text-[#695E72] sora mb-4 ">Integer mattis bibendum in mattis pulvinar viverra augue. Aliquam molestie neque, senectus vel, bibendum vitae.</p>
+
+          <h2 class="lg:text-2xl text-xl sora font-medium text-blue-500 mb-5">Ultricies</h2>
+          <p class="lg:text-xl text-[#695E72] sora mb-4 ">Lobortis ac tellus dictum gravida aliquam. Dignissim mattis eget elementum pharetra, tristique. Quam erat feugiat.</p>
+        </div>
+        <div class="lg:m-0 m-5 ">
+          <img class="lg:w-[100%] w-[80%] mx-auto" src="./c1-assets/ricky-0557395712.webp" alt="">
+        </div>
+       </section> -->
+
+      <!-- Trending Pet Products section -->
+      <section class="lg:bg-[#FFF9F4] pb-36 lg:mt-32">
+        <div class="lg:w-[1320px] mx-auto">
+          <h2 class="pt-36 lg:block hidden lg:mb-12 mb-6 adlam text-4xl">
+            Trending Pet Products
+          </h2>
+          <h1
+            class="adlam lg:pt-[140px] lg:hidden lg:mb-12 mb-6 lg:ml-[120px] ml-5 text-2xl pt-10"
+          >
+            Browse By Categories
+          </h1>
+
+          <div class="lg:flex lg:justify-between p-6">
+            <div
+              class="bg-[#F9DF8A] bg-[url('./c1-assets/cute-pet-small.png')] bg-right-bottom bg-auto bg-no-repeat h-[400px] lg:w-[424px] pt-10 lg:pt-12 pl-6 lg:pl-8 rounded-lg"
+            >
+              <h2 class="adlam text-[26px] lg:text-[32px]">
+                T- Shirt For Dogs
+              </h2>
+              <p class="sora my-3 lg:mt-6 lg:mb-6 text-[#574F35]">
+                Discover a world of treats, toys, and <br />
+                essentials handpicked for
+              </p>
+              <button
+                class="bg-white font-medium lg:p-[10px_30px] p-[8px_24px] rounded-lg lg:text-xl"
+              >
+                Shop Now
+              </button>
+            </div>
+            <!-- cards container -->
+            <div>
+              <div
+                class="grid grid-cols-2 lg:grid-cols-3 lg:gap-5 gap-3 lg:m-0 mt-6"
+              >
+                <!-- Card-1 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p- rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/dog-cartoon.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden p-3"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora lg:text-[16px] text-[10px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- Card-2 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p-3 rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/fish-cartoon.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora lg:text-[16px] text-[10px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- Card-3 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p-3 rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/bird-cartoon.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora lg:text-[16px] text-[10px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- card 4 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p-3 rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/rabbit-cartoon.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora text-[10px] lg:text-[16px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- Card-5 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p-3 rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/bird-cartoon.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora text-[10px] lg:text-[16px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- Card-6 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p-3 rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora text-[10px] lg:text-[16px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- Card-7 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p-3 rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/fish-cartoon.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora text-[10px] lg:text-[16px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- Card-8 -->
+                <div
+                  class="flex gap-4 bg-white border border-[#F3F3F31] p-4 lg:w-[275px] rounded-xl"
+                >
+                  <div
+                    class="w-[53px] h-[53px] lg:h-[86px] lg:w-[86px] bg-[#FFF9F4] lg:p-5 p-3 rounded-lg"
+                  >
+                    <img
+                      class="bg-[#FFF9F4] rounded-lg lg:flex hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                    <img
+                      class="object-contain lg:hidden"
+                      src="./c1-assets/pet-couch.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora text-[10px] lg:text-[16px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="lg:text-xl text-[14px] font-medium sora">
+                      Pet Bed
+                    </h2>
+                    <p class="font-medium text-[10px] lg:text-[16px]">$39.99</p>
+                  </div>
+                </div>
+                <!-- card 9 -->
+                <div
+                  class="gap-4 bg-white lg:flex hidden border border-[#F3F3F31] lg:p-4 lg:w-[275p] rounded-xl"
+                >
+                  <div>
+                    <img
+                      class="p-5 bg-[#FFF9F4] rounded-lg"
+                      src="./c1-assets/rabbit-cartoon.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h3 class="sora lg:text-[16px]">
+                      <i class="fa-solid fa-star text-[#FFC107]"></i> 4.5
+                    </h3>
+                    <h2 class="text-xl font-medium sora">Pet Bed</h2>
+                    <p class="font-medium">$39.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Everyday low Price -->
+      <section class="lg:mt-[140px] mt-10 w-[1320px] mx-auto lg:mb-[140px]">
+        <h1 class="lg:mb-12 adlam lg:text-4xl text-2xl">Everyday low Price</h1>
+        <div class="lg:flex lg:gap-6 mx-auto">
+          <!-- left side -->
+          <div
+            class="lg:m-0 m-5 flex justify-between lg:w-[785px] bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] rounded-xl"
+          >
+            <div class="lg:ml-[88px] ml-[34px] lg:mt-[136px] mt-[38px]">
+              <p class="text-[#000000] lg:text-xl mb-3 lg:block hidden">
+                Under Price
+              </p>
+              <h2 class="lg:text-3xl adlam-display">Pet Grooming Mitt</h2>
+              <p
+                class="text-[#FFFFFF] lg:text-2xl mt-2 mb-4 adlam-display hidden lg:block"
+              >
+                (Easy Hair Removal)
+              </p>
+              <p
+                class="adlam-display lg:text-5xl text-4xl lg:text-black text-white"
+              >
+                $7.99
+              </p>
+            </div>
+            <img
+              class="lg:w-[380px] w-[200px] lg:h-[480px]"
+              src="./c1-assets/cute-dog-mid.png"
+              alt=""
+            />
+          </div>
+
+          <!-- right side -->
+          <div
+            style="background-image: linear-gradient(135deg, #fff9f4, #f9df8a)"
+            class="relative lg:m-0 m-5 h-[300px] lg:h-[500px] flex lg:w-[512px] mt-5 lg:mt-0 rounded-xl"
+          >
+            <div class="lg:mt-[55px] lg:ml-[50px]">
+              <h2
+                class="adlam-display lg:text-3xl text-xl lg:mt-0 mt-[38px] ml-[34px] lg:ml-0 mb-5"
+              >
+                T-Shirt for Dogs
+              </h2>
+              <p
+                class="adlam-display lg:text-5xl text-[#FFDC26] text-4xl text-btn-primary ml-[34px] lg:ml-0"
+              >
+                $7.99
+              </p>
+            </div>
+            <img
+              class="absolute right-0 bottom-0 lg:w-[330px] lg:h-[500px] object-cover"
+              src="./c1-assets/cute-pet-small.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- challenge part -->
+      <section class="mb-32 mt-32">
+        <div class="px-5 lg:px-0 lg:w-[1320px] lg:mx-auto mt-4 lg:mt-24">
+          <h2 class="font-bold text-2xl lg:text-[40px] text-center">
+            Customer Review
+          </h2>
+          <div
+            class="grid grid-cols-1 gap-4 lg:justify-between lg:grid-cols-4 mt-12"
+          >
+            <!-- card 1 -->
+            <div
+              class="card bg-[#77AAEA] shadow-xl border border-[#DEDEDE] mx-auto rounded-2xl"
+            >
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div
+                    class="ring-offset-base-100 w-24 rounded-full ring-offset-2"
+                  >
+                    <div class="avatar">
+                      <div class="w-24 rounded-full">
+                        <img src="c1-assets/images.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body items-center text-center">
+                <p class="text-[#494949] leading-6">
+                  Top-notch service and stunning results. We’re thrilled with
+                  the design.
+                </p>
+                <!-- rating -->
+                <div>
+                  <div class="rating">
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-1"
+                      class="mask mask-star bg-[#E77C40]"
+                      checked="checked"
+                    />
+                  </div>
+                </div>
+                <h6 class="text-black text-sm font-semibold mb-2">Oliver</h6>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div
+              class="card bg-[#A4DAC3] shadow-xl border border-[#DEDEDE] rounded-2xl mx-auto"
+            >
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div
+                    class="ring-offset-base-100 w-24 rounded-full ring-offset-2"
+                  >
+                    <div class="avatar">
+                      <div class="w-24 rounded-full">
+                        <img src="c1-assets/avater3.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body items-center text-center">
+                <p class="text-[#494949] leading-6">
+                  Responsive, innovative, and a pleasure to work with. Highly
+                  recommend
+                </p>
+                <!-- rating -->
+                <div>
+                  <div class="rating">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star bg-[#E77C40]"
+                      checked="checked"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                  </div>
+                </div>
+                <h6 class="text-black text-sm font-semibold mb-2">James</h6>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div
+              class="card bg-[#EFDA6E] shadow-xl border border-[#DEDEDE] rounded-2xl mx-auto lg:ml-auto"
+            >
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div
+                    class="ring-offset-base-100 w-24 rounded-full ring-offset-2"
+                  >
+                    <div class="avatar">
+                      <div class="w-24 rounded-full">
+                        <img src="c1-assets/avater2.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body items-center text-center">
+                <p class="text-[#494949] leading-6">
+                  Exceptional design and great attention to detail and many
+                  more.
+                </p>
+                <!-- rating -->
+                <div>
+                  <div class="rating">
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-3"
+                      class="mask mask-star bg-[#E77C40]"
+                      checked="checked"
+                    />
+                  </div>
+                </div>
+                <h6 class="text-black text-sm font-semibold mb-2">Jack</h6>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div
+              class="card bg-[#E7C1D3] shadow-xl border border-[#DEDEDE] mx-auto rounded-xl"
+            >
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div
+                    class="ring-offset-base-100 w-24 rounded-full ring-offset-2"
+                  >
+                    <div class="avatar">
+                      <div class="w-24 rounded-full">
+                        <img src="c1-assets/avater1.webp" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body items-center text-center">
+                <p class="text-[#494949] leading-6">
+                  Highly creative and professional. They brought our vision to
+                  life beautifully!
+                </p>
+                <!-- rating -->
+                <div>
+                  <div class="rating">
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star bg-[#E77C40]"
+                      checked="checked"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-4"
+                      class="mask mask-star bg-[#E77C40]"
+                    />
+                  </div>
+                </div>
+                <h6 class="text-black text-sm font-semibold mb-2">Harry</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Get Pawsome News! -->
+      <section
+        class="relative mx-auto w-[1320px] lg:-mb-[250px] mt-8 -mb-[300px] z-10"
+      >
+        <div class="bg-[#FFF9F4] rounded-2xl lg:flex lg:gap-[100px] m-5 lg:m-0">
+          <div class="pt-6">
+            <img
+              class="lg:w-[330px] w-[190px] lg:h-[415px] h-[238px] lg:mt-[38px] mx-auto object-cover lg:mb-[38px] lg:ml-[88px]"
+              src="./c1-assets/cute-pet-mid.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <h1
+              class="lg:text-4xl text-2xl adlam-display lg:mt-[110px] text-center lg:text-start mt-8 lg:mb-5 mb-3"
+            >
+              Get Pawsome News!
+            </h1>
+            <p
+              class="lg:text-2xl sora text-[#111111] lg:mb-9 text-center lg:text-start m-4 lg:m-0"
+            >
+              Exclusive training tips, ticks, product deals and more.
+            </p>
+
+            <input
+              class="lg:w-full w-[90%] lg:ml-0 ml-5 p-[8px] lg:p-[18px] text-[#C4C4C4] lg:mb-9 mb-6 rounded-lg"
+              type="email"
+              placeholder="Enter email...."
+            />
+            <div class="ml-[100px] lg:ml-0">
+              <button
+                class="bg-btn-primary mb-6 lg:mb-0 p-[10px_30px] rounded-lg lg:text-xl font-medium sora"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#F9DF8A] pt-[390px] lg:pb-[140px] pb-[56px]">
+      <div class="mx-auto w-[1320px] lg:flex lg:justify-between">
+        <div class="lg:w-[35%]">
+          <div class="flex items-center gap-3 mb-6">
+            <img
+              class="w-[48px] h-[48px]"
+              src="c1-assets/logo-footer.png"
+              alt=""
+            />
+            <h1 class="sora lg:text-2xl text-xl">
+              Browse<span class="text-[#FFDC26]">4</span>Pets
+            </h1>
+          </div>
+          <p class="sora lg:text-xl mb-[36px] lg:mb-0">
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends
+          </p>
+        </div>
+
+        <div>
+          <p class="sora lg:text-xl mb-6">Find a pet</p>
+          <p class="sora lg:text-xl mb-6">Breeds</p>
+          <p class="sora lg:text-xl">Contact us</p>
+        </div>
+        <div>
+          <p class="font-medium lg:mt-16 mt-10 mb-3">Follow us</p>
+          <div class="flex gap-5 lg:gap-7">
+            <img class="w-6 h-6" src="c1-assets/Mask group.png" alt="" />
+            <img class="w-6 h-6" src="c1-assets/Vector (1).png" alt="" />
+            <img class="w-6 h-6" src="c1-assets/Vector.png" alt="" />
+            <img class="w-6 h-6" src="c1-assets/Group.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
